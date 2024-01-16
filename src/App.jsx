@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import portfolioBG from './assets/p2Background.png'
+import profilepic from './assets/profilepic.jpg'
+import About from './components/about.jsx'
+import Contact from './components/contact.jsx'
+import OneCounter from './components/onecount.jsx'
+import TenCounter from './components/tencount.jsx'
+import Exponential from './components/expocount.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <About banner={"Peter's Portfolio"}
+      title={"PLAY PLAY PLAY"}/>
+          <img src={portfolioBG} className="portfolio-bg bg-image" alt="Portfolio Background"/>
+          <img src={profilepic} className="profilepic"></img>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+
+      <div>
+        <Contact contactbanner={"Contact Me:"} />
+      </div>
+
+      <div>
+        <button>
+          <OneCounter />
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button>
+        <TenCounter />
+        </button>
+        <button>
+          <Exponential />
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+ 
     </>
   )
 }
