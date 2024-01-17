@@ -7,14 +7,16 @@ const Contact = (props) => {
     
     :
 
+    // Contact component
+
     <div>
         <h1 className="contact-me">{props.contactbanner}</h1>
         <h2>
             <p>
                 <ul className="contact-me">
-                    <li>Linkedin:</li>
-                    <li>E-mail:</li>
-                    <li>Resume:</li>
+                    <li><a href="https://www.linkedin.com/in/peter-j-martinez-49b81771">Linkedin</a></li>
+                    <li><a href="mailto: pmrtnz@me.com">E-mail</a></li>
+                    <li><a href="">Resume</a></li>
                 </ul>
             </p>
         </h2>

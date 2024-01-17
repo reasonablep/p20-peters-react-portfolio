@@ -1,31 +1,36 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.nav-elements{
+  font-size: 3dvb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.nav-elements:hover{
+  filter: drop-shadow(0 0 2em #D2AB99);
 }
 
 .header{
-  font-family:'Times New Roman', Times, serif
+  font-size: 8dvb;
 }
 
-.about {
-  display: flex;
-  display: row;
+.banner{
+  font-size: 6dvb;
+}
 
+.bio-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bio{
+  font-size: 3dvb;
+  max-width: 55%;
 }
 
 .bg-image {
@@ -41,8 +46,9 @@
 .profilepic {
   position: relative;
   z-index: 1;
-  max-width: 30%;
-  max-height: 30%;
+  max-width: 30dvb;
+  max-height: 30dvb;
+  display: blockw;
 }
 
 .contact-me {

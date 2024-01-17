@@ -11,16 +11,18 @@ length === 0 ?
 
 : 
 
-<div className="header">
-    <h1>{props.banner}</h1>
-    <h2>{props.title}</h2>
-    <div className="about">
-        <h1>About Me:</h1>
+<div>
+    <h1 className="header">{props.header}</h1>
+    <h2 className="banner">{props.banner}</h2>
+    <div className = "bio-container">
+    <img className="profilepic" src={props.profilepic}></img>
+    <div className="bio">
+        <h2>Biography:</h2>
         <p>
-            Biography
+    I am a recent graduate from the UC Santa Cruz BMB major, and I am currently pursuing a certificate in full-stack web development in order to pursue a career in bioinformatics. I have over 15 years of work experience in several different fields including telecommunication, retail, fitness, and event planning.
         </p>
-        <img>{props.profilepic}</img>
     </div>
+</div>
 </div>
 
 
