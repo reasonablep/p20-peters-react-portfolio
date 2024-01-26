@@ -1,14 +1,24 @@
+*{
+  background-color: black;
+  color: white;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  background-color: #8DB38B;
 }
 
 .nav-elements{
+  background-image: url('./assets/p2Background.png');
+  background-position: center 60%;
   font-size: 3dvb;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  border-radius: 2rem;
+
 }
 
 .nav-elements:hover{
@@ -16,7 +26,11 @@
 }
 
 .header{
+  display: inline-flex;
   font-size: 8dvb;
+  color: black;
+  background-color:#04724D;
+  border-radius: 2rem;
 }
 
 .banner{
@@ -34,7 +48,7 @@
 }
 
 .bg-image {
-  position: fixed;
+  position:static;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,6 +63,11 @@
   max-width: 30dvb;
   max-height: 30dvb;
   display: blockw;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .contact-me {

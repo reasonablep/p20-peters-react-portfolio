@@ -1,5 +1,7 @@
-import portfolioBG from './assets/p2Background.png'
+import Nav from './components/nav.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/about.jsx'
+import Projects from './components/projects.jsx'
 import Contact from './components/contact.jsx'
 import OneCounter from './components/onecount.jsx'
 import TenCounter from './components/tencount.jsx'
@@ -12,25 +14,43 @@ function App() {
   return (
     <>
       <div>
-        <nav class="nav">
-          <ul class="nav-elements">
-            <h3>About</h3>
-            <h3>Projects</h3>
-            <h3>Contact Me</h3>
-          </ul>
-        </nav>
-        <About header={"Peter's Portfolio"}
+    <Nav/>
+        <About className={"header"} header={"Peter's Portfolio Page"}
       banner={"PLAY PLAY PLAY"}
       profilepic={profilepic}
       />
-          <img src={portfolioBG} className="portfolio-bg bg-image" alt="Portfolio Background"/>
+      </div>
+      <div id='projects'>
+        <Projects projects={"Projects"}
+        eachProject = {
+          {
+            project1: "Horiseon HTML/CSS Exercise",
+            project2: "JS Random Password Generator", 
+            project3: "Weather API Retrieval",
+            project4: "JavaScript Quiz Game",
+            project5: "API Day Scheduler",
+            project6: "TrailerPhone Movie Trailer Service",
+            project7: "Node Inquirer README Generator",
+            project8: "Node Inquirer SVG Generator",
+            project9: "Sequelize E-Commerce Back End",
+            project10: "MVC Techie Thoughts Blog Site",
+            project11: "Level Up Lounge",
+            project12: "Git Gist REGEX URL Tutorial",
+            project13: "Mongoose Social Media Back End",
+            project14: "PWA Text Editor",
+          }
+        }
+        ></Projects>
+
       </div>
 
-      <div>
+      <div id="contact">
         <Contact contactbanner={"Contact Me:"} />
       </div>
 
       <div>
+        <h3>
+        Just for fun: Random Math Generators</h3>
         <button>
           <OneCounter />
         </button>
