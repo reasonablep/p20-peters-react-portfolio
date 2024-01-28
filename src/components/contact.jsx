@@ -1,4 +1,13 @@
+import { useState } from 'react';
+import ContactForm from './ContactForm';
+
 const Contact = (props) => {
+    
+    const [showContactForm, setShowContactForm] = useState(false);
+
+    const toggleContactForm = () => {
+        setShowContactForm(!showContactForm);
+    };
 
     return props?.items?.
     length === 0 ?
@@ -7,20 +16,29 @@ const Contact = (props) => {
     
     :
 
-    // Contact component
+    (
 
     <div>
-        <h1 className="contact-me">{props.contactbanner}</h1>
+        <h1 className="contact-me"
+        style={{
+            borderStyle: 'solid',
+            border: '#04724D',
+            borderWidth: '1px'
+        }}
+        >{props.contactbanner}</h1>
         <h2>
             <p>
                 <ul className="contact-me">
                     <li><a href="https://www.linkedin.com/in/peter-j-martinez-49b81771">Linkedin</a></li>
                     <li><a href="mailto: pmrtnz@me.com">E-mail</a></li>
                     <li><a href="">Resume</a></li>
+                    <li><a onClick={toggleContactForm}>Contact Form</a></li>
                 </ul>
             </p>
         </h2>
+        {showContactForm && <ContactForm />}
     </div>
+    )
 }
 
 export default Contact;

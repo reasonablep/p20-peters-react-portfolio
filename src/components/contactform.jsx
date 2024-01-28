@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@mui/material/button'
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -41,7 +42,16 @@ const ContactForm = () => {
                 required
                 />
             </div>
-            <button type="submit">Submit</button>
+            <Button
+
+            variant="outlined"
+            style={{
+            
+                fontWeight: '800',
+                color: '#04724D'
+            }}
+            type="submit">
+                SUBMIT</Button>
         </form>
     );
 };

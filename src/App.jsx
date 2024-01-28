@@ -1,13 +1,14 @@
 import Nav from './components/nav.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/about.jsx'
 import Projects from './components/projects.jsx'
 import Contact from './components/contact.jsx'
+// import ContactForm from './components/contactForm.jsx'
 import OneCounter from './components/onecount.jsx'
 import TenCounter from './components/tencount.jsx'
 import Exponential from './components/expocount.jsx'
 import profilepic from './assets/profilepic.jpg'
 import './App.css'
+
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     <>
       <div>
     <Nav/>
-        <About className={"header"} header={"Peter's Portfolio Page"}
+        <About className={"header"}
       banner={"PLAY PLAY PLAY"}
       profilepic={profilepic}
       />
@@ -46,9 +47,10 @@ function App() {
 
       <div id="contact">
         <Contact contactbanner={"Contact Me:"} />
+        {/* <ContactForm className = "button" theme={theme} color={"ochre"} /> */}
       </div>
 
-      <div>
+      <div id="math-generators">
         <h3>
         Just for fun: Random Math Generators</h3>
         <button>
