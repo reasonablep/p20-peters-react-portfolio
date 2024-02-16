@@ -4,14 +4,20 @@
   background-color: #8DB38B;
 }
 
+body {
+  margin:0;
+  padding:0;
+}
+
 .nav-elements{
   background-image: url('./assets/p2Background.png');
   background-position: center 60%;
-  font-size: 3dvb;
+  font-size: 5dvb;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  color: #BDBEA9;
 
 }
 
@@ -52,11 +58,9 @@
 }
 
 .profilepic {
-  position: relative;
-  z-index: 1;
-  max-width: 30dvb;
-  max-height: 30dvb;
-  display: blockw;
+  max-width: 25%;
+  max-height: 25%;
+  display: block;
 }
 
 .projects-container {
@@ -64,13 +68,24 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+#contact {
+  margin-block: 10%;
+}
+
 .contact-me {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-width: 1px;
+  border-color:#BDBEA9;
+  border-style: solid;
+}
 
-
+.footer {
+  border-width: 1px;
+  border-color: #BDBEA9;
+  border-style: solid;
 }
 
 .active a {

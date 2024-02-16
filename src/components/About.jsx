@@ -4,7 +4,7 @@ const About = ({profilepic}) => {
 
         <div id='about'>
             <div className="bio-container">
-                <img src={profilepic}></img>
+                <img className="profilepic" src={profilepic}></img>
                 <div className="bio">
                     <h2>Biography</h2>
                     <p>

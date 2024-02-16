@@ -13,7 +13,7 @@ function Nav () {
   [location])
 
     return (
-      <nav>
+      <nav className="nav-container">
         <ul className="nav-elements">
           <li>
             <Link to='/' className={activeLink === 'home' ? 'active' : ''}>Home</Link>

@@ -7,8 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import profilepic from './assets/profilepic.jpg';
 import './App.css';
-
-
+import Footer from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -44,9 +43,10 @@ function App() {
         />
         <Route
           path="/contact"
-          element={<Contact contactbanner={"Contact Me:"} />}
+          element={<Contact contactbanner={"Contact Me"} />}
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
