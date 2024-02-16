@@ -20,11 +20,6 @@ const Contact = (props) => {
 
     <div id='contact'>
         <h1 className="contact-me"
-        style={{
-            borderStyle: 'solid',
-            border: '#04724D',
-            borderWidth: '1px'
-        }}
         >{props.contactbanner}</h1>
         <h2>
                 <ul className="contact-me">

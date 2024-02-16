@@ -18,9 +18,7 @@ function Nav () {
           <li>
             <Link to='/' className={activeLink === 'home' ? 'active' : ''}>Home</Link>
           </li>
-          <li>
-            <Link to='/about' className={activeLink === 'about' ? 'active' : ''}>About</Link>
-          </li>
+    
           <li>
             <Link to='/projects' className={activeLink === 'projects' ? 'active' : ''}>Projects</Link>
           </li>
