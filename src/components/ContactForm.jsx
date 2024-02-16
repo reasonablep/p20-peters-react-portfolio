@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '@mui/material/button'
+import Button from '@mui/material/Button'
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
