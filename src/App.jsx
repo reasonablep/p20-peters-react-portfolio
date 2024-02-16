@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import About from './components/About.jsx'
 import Projects from './components/Projects.jsx'
@@ -12,16 +13,17 @@ import './App.css'
 function App() {
 
   return (
-    <>
+    <Router>
+      <div>
       <div id='about'>
     <Nav/>
-        <About className={"header"}
+    <Route path='/about' element={<About className={"header"}
       banner={"PLAY PLAY PLAY"}
       profilepic={profilepic}
-      />
+      />}/>
       </div>
       <div id='projects'>
-        <Projects projects={"Portfolio Projects"}
+        <Route path='projects' element={<Projects projects={"Portfolio Projects"}
         eachProject = {
           {
             project1: "JS Password Generator", 
@@ -30,14 +32,12 @@ function App() {
             project4: "TrailerFone Trailer Service",
             project5: "MVC Techie Thoughts Blog Site",
             project6: "Level Up Lounge",
-          }
-        }
-        ></Projects>
-
-      </div>
+          }} />} />
+        </div>
 
       <div id="contact">
-        <Contact contactbanner={"Contact Me:"} />
+        <Route path='contact' element={<Contact contactbanner={"Contact Me:"} />}/>
+  
       </div>
 
       <div id="math-generators">
@@ -48,9 +48,9 @@ function App() {
         <TenCounter />
           <Exponential />
       </div>
- 
-    </>
-  )
+ </div>
+    </Router>
+  );
 }
 
 export default App
