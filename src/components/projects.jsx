@@ -1,5 +1,4 @@
 import { projectImages } from './Variables/projectImages.jsx'
-import React, { useState, useEffect } from 'react'
 
 const Projects = (props) => {
 
@@ -10,7 +9,7 @@ const Projects = (props) => {
 
     : 
 
-<div>
+<div id='projects'>
     <h1>{props.projects}</h1>
     <section className = "projects-container">
         <p>

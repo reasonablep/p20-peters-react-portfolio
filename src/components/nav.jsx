@@ -6,8 +6,8 @@ function Nav () {
   const location = useLocation();
 
   useEffect(() => {
-    const pathName = location.pathName.substring(1);
-    setActiveLink(pathName || 'home');
+    const pathname = location.pathname.substring(1);
+    setActiveLink(pathname || 'home');
   },
   [location])
 
@@ -30,6 +30,6 @@ function Nav () {
       </nav>
     )
 
-};
+}
 
 export default Nav

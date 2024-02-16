@@ -18,7 +18,7 @@ const Contact = (props) => {
 
     (
 
-    <div>
+    <div id='contact'>
         <h1 className="contact-me"
         style={{
             borderStyle: 'solid',

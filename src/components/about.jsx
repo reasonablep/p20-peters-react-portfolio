@@ -1,37 +1,10 @@
-const About = (props) => {
+const About = ({profilepic}) => {
 
-    return props?.items?.
-        length === 0 ?
+    return (
 
-        <h1>About Empty</h1>
-
-        :
-
-        <div>
-            <h1 className="header">Peter's
-             <span style={{
-                color: 'white',
-                fontWeight: '800'
-             }}>Portfolio</span>
-             Page</h1>
-            <h2 className="banner">{props.banner}</h2>
-            <p>Because the best way to
-                <span style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    color: 'white',
-                    fontWeight: '900',
-                }}>L E A R N</span>
-                is to <br></br>
-                <span style={{
-                    color: 'white',
-                    fontWeight: '800'
-                }}>
-                    <a href='#math-generators'>P L A Y</a>
-                </span>
-                </p>
+        <div id='about'>
             <div className="bio-container">
-                <img className="profilepic" src={props.profilepic}></img>
+                <img src={profilepic}></img>
                 <div className="bio">
                     <h2>Biography</h2>
                     <p>
@@ -40,7 +13,7 @@ const About = (props) => {
                 </div>
             </div>
         </div>
-
+    )
 
 };
 
