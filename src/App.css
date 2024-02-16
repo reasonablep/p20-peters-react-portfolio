@@ -71,3 +71,7 @@
   align-items: start;
 
 }
+
+.active a {
+  color: grey;
+}

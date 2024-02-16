@@ -27,14 +27,13 @@ const Contact = (props) => {
         }}
         >{props.contactbanner}</h1>
         <h2>
-            <p>
                 <ul className="contact-me">
                     <li><a href="https://www.linkedin.com/in/peter-j-martinez-49b81771">Linkedin</a></li>
                     <li><a href="mailto: pmrtnz@me.com">E-mail</a></li>
                     <li><a href="">Resume</a></li>
-                    <li><a onClick={toggleContactForm}>Contact Form</a></li>
+                    <li><a href='#contact' onClick={toggleContactForm}>Contact Form</a></li>
                 </ul>
-            </p>
+        
         </h2>
         {showContactForm && <ContactForm />}
     </div>
