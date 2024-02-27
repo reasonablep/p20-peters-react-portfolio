@@ -19,7 +19,9 @@ This is a web development work portfolio designed using a React framework with J
 The site simply requires a web browser to access.
 
 ## Usage
-Navigate the site using a web browser, and use the navigation links to move between parts of the page.
+Navigate the site using a web browser, and use the navigation links to move between parts of the page. The URL of the deployed application is,
+
+https://peters-react-portfolio.netlify.app/
 
 ## Screenshots
 
