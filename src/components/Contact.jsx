@@ -19,7 +19,7 @@ const Contact = (props) => {
     (
 
     <div id='contact'>
-        <h1 className="contact-me"
+        <h1 className="contact-me contact-banner"
         >{props.contactbanner}</h1>
         <h2>
                 <ul className="contact-me">
