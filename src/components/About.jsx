@@ -8,7 +8,7 @@ const About = ({profilepic}) => {
                 <div className="bio">
                     <h2>Biography</h2>
                     <p>
-                        I am a recent graduate from the UC Santa Cruz BMB major, and I am currently pursuing a certificate in full-stack web development in order to pursue a career in bioinformatics. I have over 15 years of work experience in several different fields including telecommunication, retail, fitness, and event planning.
+                        I am a graduate student entering my final semester of the Master of Science in Bioinformatics (BMB) program at San Jose State University. I also hold a bachelors degree in Biochemistry and Molecular Biology (BMB) from the UC Santa Cruz in 2023. I have over 20 years of work experience in several different fields including AI model evaluation, telecommunication, retail, fitness, and event planning.
                     </p>
                 </div>
             </div>
