@@ -1,54 +1,34 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import profilepic from './assets/profilepic.jpg';
-import './App.css';
 import Footer from './components/Footer';
+import './App.css';
 
-function App() {
-  const location = useLocation();
+export default function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const page = pathname === '/projects' ? 'Projects' : pathname === '/contact' ? 'Contact' : 'Portfolio';
+    document.title = `${page} · Peter Martinez`;
+  }, [pathname]);
 
   return (
-    <div>
+    <div className="site-shell">
+      <a className="skip-link" href="#main-content" onClick={(event) => { event.preventDefault(); document.getElementById('main-content').focus(); }}>Skip to content</a>
       <Nav />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Home banner={"PLAY PLAY PLAY"} />
-              {location.pathname === '/' && <About profilepic={profilepic} />}
-            </div>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <Projects
-              projects={"Portfolio Projects"}
-              eachProject={{
-                project1: "JS Password Generator",
-                project2: "Weather API Retrieval",
-                project3: "JavaScript Quiz Game",
-                project4: "TrailerFone Trailer Service",
-                project5: "MVC Techie Thoughts Blog Site",
-                project6: "Level Up Lounge",
-              }}
-            />
-          }
-        />
-        <Route
-          path="/contact"
-          element={<Contact contactbanner={"Contact Me"} />}
-        />
-      </Routes>
+      <main id="main-content" tabIndex={-1}>
+        <Routes>
+          <Route path="/" element={<><Home /><About /></>} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<><Home /><About /></>} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
 }
-
-export default App;

@@ -1,20 +1,16 @@
-const About = ({profilepic}) => {
+import profilepic from '../assets/profilepic.jpg';
 
-    return (
-
-        <div id='about'>
-            <div className="bio-container">
-                <img className="profilepic" src={profilepic}></img>
-                <div className="bio">
-                    <h2>Biography</h2>
-                    <p>
-                        I am a graduate student entering my final semester of the Master of Science in Bioinformatics (BMB) program at San Jose State University. I also hold a bachelors degree in Biochemistry and Molecular Biology (BMB) from the UC Santa Cruz in 2023. I have over 20 years of work experience in several different fields including AI model evaluation, telecommunication, retail, fitness, and event planning.
-                    </p>
-                </div>
-            </div>
-        </div>
-    )
-
-};
-
-export default About;
+export default function About() {
+  return (
+    <section className="about-section container" aria-labelledby="about-title">
+      <div className="portrait-wrap"><img className="profilepic" src={profilepic} alt="Peter Martinez" /></div>
+      <div className="bio">
+        <p className="eyebrow">A little about me</p>
+        <h2 id="about-title">Science background.<br />Builder’s mindset.</h2>
+        <p>I’m Peter, a graduate student in the Master of Science in Bioinformatics program at San José State University. I earned my bachelor’s degree in Biochemistry and Molecular Biology from UC Santa Cruz in 2023.</p>
+        <p>My work brings together bioinformatics research and full-stack web development. I bring over 20 years of experience across AI model evaluation, telecommunications, retail, fitness, and event planning.</p>
+        <ul className="tags" aria-label="Areas of focus"><li>Bioinformatics</li><li>Full-stack development</li><li>AI model evaluation</li></ul>
+      </div>
+    </section>
+  );
+}
