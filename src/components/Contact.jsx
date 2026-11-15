@@ -12,7 +12,7 @@ export default function Contact() {
       </div>
       <div className="contact-layout">
         <div className="contact-links">
-          <a href="mailto:pmrtnz@me.com"><span><small>Email</small>pmrtnz@me.com</span><span aria-hidden="true">↗</span></a>
+          <a href="mailto:ptrmrtnz@outlook.com"><span><small>Email</small>ptrmrtnz@outlook.com</span><span aria-hidden="true">↗</span></a>
           <a href="https://www.linkedin.com/in/peter-j-martinez-49b81771" target="_blank" rel="noopener noreferrer"><span><small>Professional profile</small>LinkedIn</span><span aria-hidden="true">↗</span></a>
           <a href="https://github.com/reasonablep" target="_blank" rel="noopener noreferrer"><span><small>Code & experiments</small>GitHub</span><span aria-hidden="true">↗</span></a>
         </div>
