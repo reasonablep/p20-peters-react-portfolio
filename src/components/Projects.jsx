@@ -1,56 +1,38 @@
-import { projectImages } from './Variables/projectImages.jsx'
+import { projects } from '../data/projects';
 
-const Projects = (props) => {
-
-    return props?.items?.
-        length === 0 ?
-
-        <h1>Projects empty</h1>
-
-        :
-
-        <div id='projects'>
-            <h1>{props.projects}</h1>
-            <section className="projects-container">
-                <p>
-                    Project 1:{props.eachProject.project1}
-                </p>
-                <a href="https://reasonablep.github.io/password-generator-challenge-1/"
-                    target="blank">
-                <img style={{ width: '50%', height: 'auto' }} src={projectImages.project2}></img>
-                </a>
-                <p>
-                    Project 2:{props.eachProject.project2}
-                </p>
-                <a href="https://reasonablep.github.io/weather-dash-challenge/" target="_blank">
-                <img style={{ width: '50%', height: 'auto' }} src={projectImages.project2}></img>
-                </a>
-                <p>
-                    Project 3:{props.eachProject.project3}
-                </p>
-                <a href="https://reasonablep.github.io/JavaScript_code_quiz_p4/" target="_blank"><img style={{ width: '50%', height: 'auto' }} src={projectImages.project3}></img>
-                </a>
-                <p>
-                    Project 4:{props.eachProject.project4}
-                </p>
-                <a href="https://tonymagr.github.io/project1-trailer-phone-imyou/" target="_blank">
-                    <img style={{ width: '50%', height: 'auto' }} src={projectImages.project4}></img>
-                </a>
-                <p>
-                    Project 5:{props.eachProject.project5}
-                </p>
-                <a href="https://p14-techie-thoughts-ea6c22c69d49.herokuapp.com/login" target="_blank">
-                    <img style={{ width: '50%', height: 'auto' }} src={projectImages.project5}></img>
-                </a>
-                <p>
-                    Project 6:{props.eachProject.project6}
-                </p>
-                <a href="https://leveluplounge-4438f7fc5ebe.herokuapp.com/" target="_blank">
-                    <img style={{ width: '50%', height: 'auto' }} src={projectImages.project6}></img>
-                </a>
-            </section>
-        </div>
-
+export default function Projects() {
+  return (
+    <section className="projects-page container" aria-labelledby="projects-title">
+      <div className="page-heading">
+        <p className="eyebrow">Research / Development / Exploration</p>
+        <h1 id="projects-title">Things I’ve <em>built.</em></h1>
+        <p>A selection of research workflows, full-stack applications, and experiments from my learning journey. Recent work comes first.</p>
+      </div>
+      <div className="projects-container">
+        {projects.map((project) => (
+          <article className="project-card" key={project.id}>
+            {project.image ? (
+              <div className="project-image"><img src={project.image} alt={`${project.title} interface`} loading="lazy" /></div>
+            ) : (
+              <div className={`project-visual ${project.visual}`} aria-hidden="true">
+                <span>{project.visual === 'pipeline' ? '01 / RESEARCH WORKFLOW' : '02 / SINGLE-CELL ANALYSIS'}</span>
+                <strong>{project.visual === 'pipeline' ? <>From reads<br />to variants.</> : <>Small cells.<br />Rich data.</>}</strong>
+                <span>{project.visual === 'pipeline' ? 'SEQUENCE → ALIGN → ANNOTATE' : '10x DATA → METADATA → AnnData'}</span>
+              </div>
+            )}
+            <div className="project-body">
+              <div className="project-meta"><p className="eyebrow">{project.category}</p>{project.recent && <span className="recent-badge">Recent work</span>}</div>
+              <h2>{project.title}</h2>
+              <p className="project-description">{project.description}</p>
+              <ul className="tags" aria-label={`${project.title} technologies`}>{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+              <div className="project-links">
+                {project.sourceUrl && <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>}
+                {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default Projects

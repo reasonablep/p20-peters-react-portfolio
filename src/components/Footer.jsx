@@ -1,11 +1,9 @@
-function Footer () {
-    return (
-        <div className="footer">
-            <h3>
-            Peter Martinez, UC Berkeley Extension / edX Full-Stack Web Development Bootcamp
-            </h3>
-        </div>
-    )
+export default function Footer() {
+  return (
+    <footer className="site-footer container">
+      <p>© {new Date().getFullYear()} Peter Martinez</p>
+      <p>Always learning. Always building.</p>
+      <a href="https://github.com/reasonablep" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+  );
 }
-
-export default Footer;

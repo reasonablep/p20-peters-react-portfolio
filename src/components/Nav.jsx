@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
-function Nav () {
-  const [activeLink, setActiveLink ] = useState('');
-  const location = useLocation();
-
-  
-  useEffect(() => {
-    const pathname = location.pathname.substring(1);
-    setActiveLink(pathname || 'home');
-  },
-  [location])
-
-    return (
-      <nav className="nav-container">
-        <ul className="nav-elements">
-          <li>
-            <Link to='/' className={activeLink === 'home' ? 'active' : ''}>Home</Link>
-          </li>
-    
-          <li>
-            <Link to='/projects' className={activeLink === 'projects' ? 'active' : ''}>Projects</Link>
-          </li>
-          <li>
-            <Link to='contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</Link>
-          </li>
-        </ul>
+export default function Nav() {
+  return (
+    <header className="site-header container">
+      <Link className="wordmark" to="/" aria-label="Peter Martinez home">pm<span>.</span></Link>
+      <nav aria-label="Main navigation">
+        <NavLink to="/" end>About</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/contact">Contact <span aria-hidden="true">↗</span></NavLink>
       </nav>
-    )
-
+    </header>
+  );
 }
-
-export default Nav
